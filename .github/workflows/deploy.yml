@@ -4,8 +4,17 @@ on:
     branches:
       - main
       - dev
+# workflow-level env vars such as db-name that is the same for all the job
+env:
+  MONGODB_DB_NAME = gha-demo
+
 jobs:
   test:
+    # env vars that we need to use during the test
+    env:
+      MONGODB_CLUSTER_ADDRESS:
+      MONGODB_USERNAME:
+      MONGODB_PASSWORD:
     environment: testing
     runs-on: ubuntu-latest
     steps:
