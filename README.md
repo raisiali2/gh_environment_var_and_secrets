@@ -30,3 +30,10 @@ there are two ways to add variable in repo
          environment: testing
          env:
          # this access the secrets that stored for this environment specific secrets and not the general repo secret
+# module summary
+![alt text](image.png)
+## environment variables
+- 
+## secrets
+- 
+## github actions environments
