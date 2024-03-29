@@ -12,10 +12,11 @@ jobs:
   test:
     # env vars that we need to use during the test
     env:
-      MONGODB_CLUSTER_ADDRESS:
-      MONGODB_USERNAME:
-      MONGODB_PASSWORD:
+      MONGODB_CLUSTER_ADDRESS: cluster0.15pwqcc.mongodb.net
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
     environment: testing
+    PORT: 8080
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
